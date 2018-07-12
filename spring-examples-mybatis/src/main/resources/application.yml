@@ -1,0 +1,14 @@
+# ----------------------------------------------------------------------------------------------------------------------
+# 核心配置
+# ----------------------------------------------------------------------------------------------------------------------
+spring:
+  datasource:
+    url: "jdbc:mysql://10.211.55.18:3306/test?useSSL=true&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8"
+    username: "root"
+    password: "root"
+
+mybatis:
+  check-config-location: false
+  type-aliases-package: "spring.examples.mybatis"
+  mapper-locations:
+    - "classpath*:/mybatis-mapper/*.xml"

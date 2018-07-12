@@ -1,0 +1,9 @@
+server:
+  port: 8443
+  ssl:
+    enabled: true
+    key-store: "classpath:META-INF/keystore.jks"
+    key-alias: "yingzhuo"
+    key-password: "yingzhuo"
+  servlet:
+    path: "/"
