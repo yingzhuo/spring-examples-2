@@ -21,6 +21,7 @@
         <module>spring-examples-groovy</module>
         <module>spring-examples-upload</module>
         <module>spring-examples-async</module>
+        <module>spring-examples-jasypt</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -257,6 +258,13 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>5.1.46</version>
+            </dependency>
+
+            <!-- jasypt -->
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>2.1.0</version>
             </dependency>
 
             <!-- slf4j -->
