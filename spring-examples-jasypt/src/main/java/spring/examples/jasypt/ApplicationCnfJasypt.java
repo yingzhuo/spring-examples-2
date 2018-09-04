@@ -25,7 +25,7 @@ public class ApplicationCnfJasypt implements ApplicationRunner {
 
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
         log.debug("jasypt-encryption: 'root' => {}", stringEncryptor.encrypt("root"));
         log.debug("password => {}", password);
     }
