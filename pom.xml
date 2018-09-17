@@ -8,27 +8,28 @@
     <artifactId>spring-examples-2</artifactId>
     <version>1.0.0</version>
     <modules>
+        <module>spring-examples-async</module>
         <module>spring-examples-excel-view</module>
+        <module>spring-examples-groovy</module>
         <module>spring-examples-redis</module>
+        <module>spring-examples-https</module>
+        <module>spring-examples-jasypt</module>
+        <module>spring-examples-jpa</module>
         <module>spring-examples-redis-cache</module>
         <module>spring-examples-scheduling</module>
-        <module>spring-examples-https</module>
         <module>spring-examples-shiro</module>
         <module>spring-examples-retry</module>
         <module>spring-examples-redis-session</module>
         <module>spring-examples-mybatis</module>
-        <module>spring-examples-jpa</module>
-        <module>spring-examples-groovy</module>
         <module>spring-examples-upload</module>
-        <module>spring-examples-async</module>
-        <module>spring-examples-jasypt</module>
+        <module>spring-examples-swagger2</module>
     </modules>
     <packaging>pom</packaging>
 
     <properties>
         <encoding>UTF-8</encoding>
-        <spring.boot.version>2.0.3.RELEASE</spring.boot.version>
-        <spring.version>5.0.7.RELEASE</spring.version>
+        <spring.boot.version>2.0.5.RELEASE</spring.boot.version>
+        <spring.version>5.0.9.RELEASE</spring.version>
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <hsqldb.version>2.4.0</hsqldb.version>
@@ -265,6 +266,18 @@
                 <groupId>com.github.ulisesbocchio</groupId>
                 <artifactId>jasypt-spring-boot-starter</artifactId>
                 <version>2.1.0</version>
+            </dependency>
+
+            <!-- swagger2 -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>2.9.2</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>2.9.2</version>
             </dependency>
 
             <!-- slf4j -->
