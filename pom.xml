@@ -23,6 +23,7 @@
         <module>spring-examples-mybatis</module>
         <module>spring-examples-upload</module>
         <module>spring-examples-swagger2</module>
+        <module>spring-examples-webflux</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -58,6 +59,11 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-webflux</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
@@ -306,7 +312,7 @@
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.0</version>
+                <version>1.18.2</version>
                 <scope>provided</scope>
             </dependency>
 
