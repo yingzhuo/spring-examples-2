@@ -9,6 +9,7 @@
     <version>1.0.0</version>
     <modules>
         <module>spring-examples-async</module>
+        <module>spring-examples-endpoint</module>
         <module>spring-examples-excel-view</module>
         <module>spring-examples-groovy</module>
         <module>spring-examples-redis</module>
