@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
+                 version="2.0">
+
+    <!--<entity class="com.github.yingzhuo.spring.cloud.examples.entity.pet.Dog">-->
+        <!--<table name="t_dog"/>-->
+        <!--<attributes>-->
+            <!--<id name="id">-->
+                <!--<column name="id" length="32"/>-->
+            <!--</id>-->
+
+            <!--<basic name="name">-->
+                <!--<column name="name" length="20"/>-->
+            <!--</basic>-->
+        <!--</attributes>-->
+    <!--</entity>-->
+
+</entity-mappings>
