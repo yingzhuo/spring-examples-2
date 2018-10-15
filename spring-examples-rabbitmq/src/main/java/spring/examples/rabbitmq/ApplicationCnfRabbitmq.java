@@ -1,18 +1,17 @@
 package spring.examples.rabbitmq;
 
 import com.google.common.collect.ImmutableMap;
+import lombok.val;
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.Map;
-
 @Configuration
 public class ApplicationCnfRabbitmq {
 
-    @Bean("queue1")
+    @Bean
     public Queue queue1() {
-        final Map<String, Object> args = ImmutableMap.of(
+        val args = ImmutableMap.<String, Object>of(
                 "x-dead-letter-exchange", "",
                 "x-dead-letter-routing-key", "q2",
                 "x-message-ttl", 5000
@@ -21,9 +20,14 @@ public class ApplicationCnfRabbitmq {
         return new Queue("q1", true, false, false, args);
     }
 
-    @Bean("queue2")
+    @Bean
     public Queue queue2() {
         return new Queue("q2", true);
+    }
+
+    @Bean
+    public Queue queue3() {
+        return new Queue("q3", true);
     }
 
 }

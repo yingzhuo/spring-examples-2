@@ -1,5 +1,6 @@
 package spring.examples.rabbitmq.helper;
 
+import lombok.val;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageProperties;
@@ -26,14 +27,14 @@ public class RabbitUtils implements ApplicationContextAware {
     }
 
     public static void send(String exchange, String routingKey, String message, long ttl) {
-        final AmqpTemplate template = AC.getBean(AmqpTemplate.class);
-
-        final MessageProperties messageProperties = new MessageProperties();
+        val template = AC.getBean(AmqpTemplate.class);
+        val messageProperties = new MessageProperties();
 
         if (ttl > 0) {
             messageProperties.setExpiration(Long.valueOf(ttl).toString());
         }
-        final Message msg = new Message(message.getBytes(StandardCharsets.UTF_8), messageProperties);
+
+        val msg = new Message(message.getBytes(StandardCharsets.UTF_8), messageProperties);
 
         template.send(exchange, routingKey, msg);
     }
