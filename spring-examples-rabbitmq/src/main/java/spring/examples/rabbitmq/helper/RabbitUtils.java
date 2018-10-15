@@ -13,9 +13,17 @@ import java.nio.charset.StandardCharsets;
 @Component
 public class RabbitUtils implements ApplicationContextAware {
 
-    private static final String DEFAULT_EXCHANGE = "";
+    public static final String DEFAULT_EXCHANGE = "";
 
     private static ApplicationContext AC;
+
+    public static void send(String routingKey, String message) {
+        send(routingKey, message, -1);
+    }
+
+    public static void send(String routingKey, String message, long ttl) {
+        send(DEFAULT_EXCHANGE, routingKey, message, ttl);
+    }
 
     public static void send(String exchange, String routingKey, String message, long ttl) {
         final AmqpTemplate template = AC.getBean(AmqpTemplate.class);
@@ -28,14 +36,6 @@ public class RabbitUtils implements ApplicationContextAware {
         final Message msg = new Message(message.getBytes(StandardCharsets.UTF_8), messageProperties);
 
         template.send(exchange, routingKey, msg);
-    }
-
-    public static void send(String routingKey, String message, long ttl) {
-        send(DEFAULT_EXCHANGE, routingKey, message, ttl);
-    }
-
-    public static void send(String routingKey, String message) {
-        send(routingKey, message, -1);
     }
 
     @Override
