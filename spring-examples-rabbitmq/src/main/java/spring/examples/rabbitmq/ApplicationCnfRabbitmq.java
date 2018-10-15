@@ -18,12 +18,12 @@ public class ApplicationCnfRabbitmq {
                 "x-message-ttl", 5000
         );
 
-        return new Queue("q1", false, false, false, args);
+        return new Queue("q1", true, false, false, args);
     }
 
     @Bean("queue2")
     public Queue queue2() {
-        return new Queue("q2");
+        return new Queue("q2", true);
     }
 
 }
