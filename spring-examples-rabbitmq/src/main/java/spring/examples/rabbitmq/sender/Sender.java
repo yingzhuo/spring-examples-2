@@ -5,9 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
-import spring.examples.rabbitmq.helper.RabbitConstants;
-
-import java.util.UUID;
+import spring.examples.rabbitmq.helper.RabbitUtils;
 
 @Component
 public class Sender implements ApplicationRunner {
@@ -17,10 +15,8 @@ public class Sender implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) {
-        System.out.println("---");
-        rabbitTemplate.convertAndSend(RabbitConstants.DEFAULT_EXCHANGE, RabbitConstants.QUEUE_1, UUID.randomUUID().toString());
-        System.out.println("发送消息成功");
-        System.out.println("---");
+        RabbitUtils.send("q1", "你好，世界。", 3000);
+        System.out.println("--- 消息发送成功");
     }
 
 }
