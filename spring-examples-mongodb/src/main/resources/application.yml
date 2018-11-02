@@ -6,3 +6,4 @@ spring:
   data:
     mongodb:
       uri: "mongodb://root:root@10.211.55.27:27017/test?authSource=admin"
+

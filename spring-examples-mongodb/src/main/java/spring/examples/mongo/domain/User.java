@@ -23,6 +23,8 @@ public class User implements Serializable {
 
     private String gender;
 
+    private Level level;
+
     private Coordinate coordinate;
 
 }
