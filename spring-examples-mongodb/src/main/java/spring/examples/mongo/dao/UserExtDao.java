@@ -9,6 +9,6 @@ import java.util.Set;
 
 interface UserExtDao {
 
-    public List<User> find(Set<String> genderSet, Set<Level> levelSet, Point point, double maxDistance);
+    public List<User> find(Set<String> genderSet, Set<Level> levelSet, Point point, int maxDistanceInKilometres);
 
 }
