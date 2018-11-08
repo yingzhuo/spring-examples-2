@@ -13,6 +13,8 @@
     <logger name="org.springframework" level="INFO"/>
     <logger name="spring.examples" level="TRACE"/>
 
+    <logger name="User" level="TRACE"/>
+
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
     </root>

@@ -9,11 +9,11 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
-@Configuration
 @MapperScan(
         annotationClass = Mapper.class,
         basePackages = "spring.examples.mybatis"
 )
+@Configuration
 public class ApplicationCnfMybatis {
 
     @Bean
