@@ -28,6 +28,7 @@
         <module>spring-examples-upload</module>
         <module>spring-examples-swagger2</module>
         <module>spring-examples-webflux</module>
+        <module>spring-examples-redisson</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -246,6 +247,18 @@
                 <groupId>org.springframework.retry</groupId>
                 <artifactId>spring-retry</artifactId>
                 <version>1.2.2.RELEASE</version>
+            </dependency>
+
+            <!-- redisson -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>3.9.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>3.9.1</version>
             </dependency>
 
             <!-- mybatis -->
