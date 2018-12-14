@@ -10,6 +10,7 @@
     <modules>
         <module>spring-examples-async</module>
         <module>spring-examples-docker</module>
+        <module>spring-examples-elasticsearch</module>
         <module>spring-examples-endpoint</module>
         <module>spring-examples-excel-view</module>
         <module>spring-examples-groovy</module>
@@ -28,7 +29,6 @@
         <module>spring-examples-upload</module>
         <module>spring-examples-swagger2</module>
         <module>spring-examples-webflux</module>
-        <module>spring-examples-redisson</module>
     </modules>
     <packaging>pom</packaging>
 

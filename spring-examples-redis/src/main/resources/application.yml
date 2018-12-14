@@ -7,4 +7,3 @@ spring:
       master: "redismaster"
       nodes: "10.211.55.3:26379,10.211.55.3:26479,10.211.55.3:26579"
     password: "root"
-
