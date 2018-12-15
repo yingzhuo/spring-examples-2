@@ -18,6 +18,7 @@
         <module>spring-examples-jasypt</module>
         <module>spring-examples-redis</module>
         <module>spring-examples-jpa</module>
+        <module>spring-examples-logstash</module>
         <module>spring-examples-mongodb</module>
         <module>spring-examples-mybatis</module>
         <module>spring-examples-rabbitmq</module>
@@ -348,6 +349,13 @@
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
                 <version>${logback.version}</version>
+            </dependency>
+
+            <!-- logstash -->
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>5.2</version>
             </dependency>
 
             <!-- jackson -->
