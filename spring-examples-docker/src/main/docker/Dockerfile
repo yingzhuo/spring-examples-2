@@ -1,4 +1,4 @@
-FROM openjdk:8u171-alpine
+FROM openjdk:8-alpine
 MAINTAINER yingzhuo "yingzhor@gmail.com"
 VOLUME /tmp
 ADD spring-boot.jar app.jar
