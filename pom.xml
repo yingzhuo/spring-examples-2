@@ -30,6 +30,7 @@
         <module>spring-examples-upload</module>
         <module>spring-examples-swagger2</module>
         <module>spring-examples-webflux</module>
+        <module>spring-examples-redisson</module>
     </modules>
     <packaging>pom</packaging>
 
