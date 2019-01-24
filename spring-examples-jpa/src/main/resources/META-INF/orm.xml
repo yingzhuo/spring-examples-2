@@ -4,17 +4,18 @@
                  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
                  version="2.0">
 
-    <!--<entity class="com.github.yingzhuo.spring.cloud.examples.entity.pet.Dog">-->
-        <!--<table name="t_dog"/>-->
-        <!--<attributes>-->
-            <!--<id name="id">-->
-                <!--<column name="id" length="32"/>-->
-            <!--</id>-->
-
-            <!--<basic name="name">-->
-                <!--<column name="name" length="20"/>-->
-            <!--</basic>-->
-        <!--</attributes>-->
-    <!--</entity>-->
+    <!--
+    <persistence-unit-metadata>
+        <persistence-unit-defaults>
+            <access>FIELD</access>
+            <entity-listeners>
+                <entity-listener class="com.github.yingzhuo.playground.webservice.jpa.UserJpaEntityListener">
+                    <pre-persist method-name="prePersist"/>
+                    <post-persist method-name="postPersist"/>
+                </entity-listener>
+            </entity-listeners>
+        </persistence-unit-defaults>
+    </persistence-unit-metadata>
+    -->
 
 </entity-mappings>
