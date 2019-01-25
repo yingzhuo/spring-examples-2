@@ -5,5 +5,5 @@
 spring:
   data:
     mongodb:
-      uri: "mongodb://root:root@10.211.55.27:27017/test?authSource=admin"
-
+#      uri: "mongodb://admin:test@192.168.201.27:27018,192.168.201.28:27018,192.168.201.29:27018/test?authSource=admin"
+      uri: "mongodb://admin:123456@10.211.55.3:27017/lbs?authSource=admin"

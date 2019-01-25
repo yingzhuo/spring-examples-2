@@ -27,10 +27,10 @@ public class TestApplicationRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) {
         template.indexOps(User.class).ensureIndex(new GeospatialIndex("coordinate"));
-        userDao.save(new User(1L, "应卓", "男", Level.LEVEL_1, new Coordinate(100D, 100D)));
+        userDao.save(new User(1L, "应卓", "男", Level.LEVEL_1, new Coordinate(1D, 1D)));
         userDao.save(new User(2L, "文晶晶", "女", Level.LEVEL_3, new Coordinate(1D, 1D)));
 
-        val list = userDao.find(Sets.newHashSet("男"), null, new Point(0D, 0D), 3);
+        val list = userDao.find(Sets.newHashSet("男"), null, new Point(1D, 1D), 55);
         list.forEach(System.out::println);
     }
 
