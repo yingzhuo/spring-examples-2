@@ -31,6 +31,7 @@
         <module>spring-examples-swagger2</module>
         <module>spring-examples-webflux</module>
         <module>spring-examples-redisson</module>
+        <module>spring-examples-activemq</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -93,6 +94,11 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-security</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-activemq</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
