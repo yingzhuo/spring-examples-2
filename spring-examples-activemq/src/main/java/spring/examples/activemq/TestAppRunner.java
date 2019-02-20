@@ -18,12 +18,22 @@ public class TestAppRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) {
         jmsTemplate.send("x", session -> {
-            Message message = session.createTextMessage("hello");
-            message.setLongProperty(ScheduledMessage.AMQ_SCHEDULED_DELAY, 5000L);
+            Message message = session.createTextMessage("1st");
+            message.setLongProperty(ScheduledMessage.AMQ_SCHEDULED_DELAY, 7000L);
+            return message;
+        });
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        jmsTemplate.send("x", session -> {
+            Message message = session.createTextMessage("2nd");
+            message.setLongProperty(ScheduledMessage.AMQ_SCHEDULED_DELAY, 2000L);
             return message;
         });
     }
-
-
 
 }

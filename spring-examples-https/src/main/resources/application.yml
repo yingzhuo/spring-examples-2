@@ -6,4 +6,4 @@ server:
     key-alias: "yingzhuo"
     key-password: "yingzhuo"
   servlet:
-    path: "/"
+    context-path: "/"
