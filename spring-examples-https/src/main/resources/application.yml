@@ -1,9 +1,10 @@
 server:
-  port: 8443
-  ssl:
-    enabled: true
-    key-store: "classpath:META-INF/keystore.jks"
-    key-alias: "yingzhuo"
-    key-password: "yingzhuo"
+  port: 443
   servlet:
     context-path: "/"
+  ssl:
+    enabled: true
+    key-alias: "tomcat"
+    key-store-password: "tomcat"
+    key-store: "classpath:META-INF/keystore.p12"
+    key-store-type: PKCS12
