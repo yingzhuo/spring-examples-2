@@ -5,7 +5,7 @@ set -e
 
 java \
     -Djava.security.egd=file:/dev/./urandom \
-    -Duser.timezone=GMT+08 \
+    -Duser.timezone=${TZ:-Asia/Shanghai} \
     -jar /docker-application.jar \
     --spring.profiles.active=${SPRING_PROFILES_ACTIVE:-docker} \
     "$@"

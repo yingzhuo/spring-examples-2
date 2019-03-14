@@ -17,7 +17,6 @@ public class ProjectEndpoint {
             "version", "1.0.0",
             "author", "应卓");
 
-
     @ReadOperation
     public Map<String, Object> all() {
         return INFO;
@@ -25,6 +24,7 @@ public class ProjectEndpoint {
 
     @ReadOperation
     public Object prop(@Selector String name) {
+        System.out.println("1111");
         return INFO.getOrDefault(name, "");
     }
 

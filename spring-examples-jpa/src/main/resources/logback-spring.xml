@@ -15,7 +15,7 @@
 
     <!-- JPA日志 -->
     <logger name="org.hibernate.SQL" level="DEBUG"/>
-    <logger name="level.org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE"/>
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE"/>
 
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
