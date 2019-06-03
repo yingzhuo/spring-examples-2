@@ -25,12 +25,12 @@
         <module>spring-examples-rabbitmq</module>
         <module>spring-examples-redis-cache</module>
         <module>spring-examples-redis-session</module>
+        <module>spring-examples-redisson</module>
         <module>spring-examples-retry</module>
         <module>spring-examples-scheduling</module>
         <module>spring-examples-shiro</module>
-        <module>spring-examples-upload</module>
         <module>spring-examples-swagger2</module>
-        <module>spring-examples-redisson</module>
+        <module>spring-examples-upload</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -1,23 +1,24 @@
-FROM openjdk:8u191-jdk-alpine3.9
+FROM openjdk:8u212-jdk-alpine3.9
 
-MAINTAINER yingzhuo yingzhor@gmail.com
-
-WORKDIR /
+MAINTAINER 应卓 yingzhor@gmail.com
 
 USER root
 
-VOLUME /tmp
+WORKDIR /
 
-VOLUME /var/log/application
+RUN  mkdir -p \
+    /application/lib \
+    /application/tmp \
+    /application/etc \
+    /application/log
 
-ADD application.jar         docker-application.jar
+COPY --chown=root:root  application.jar          /application/app.jar
 
-ADD docker-entrypoint.sh    docker-entrypoint.sh
-
-RUN chmod 755 /docker-entrypoint.sh
-
-ENTRYPOINT ["sh", "/docker-entrypoint.sh"]
+COPY --chown=root:root  docker-entrypoint.sh     /docker-entrypoint.sh
 
 ENV TZ Asia/Shanghai
 
 EXPOSE 8080
+
+ENTRYPOINT ["sh", "/docker-entrypoint.sh"]
+

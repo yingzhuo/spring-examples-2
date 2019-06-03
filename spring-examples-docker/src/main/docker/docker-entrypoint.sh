@@ -3,11 +3,14 @@
 set -o pipefail
 set -e
 
-java \
+# startup app
+exec /usr/bin/java \
     -Djava.security.egd=file:/dev/./urandom \
     -Duser.timezone=${TZ:-Asia/Shanghai} \
-    -jar /docker-application.jar \
+    -Djava.io.tmpdir=/application/tmp \
+    -jar /application/app.jar \
     --spring.profiles.active=${SPRING_PROFILES_ACTIVE:-docker} \
-    "$@"
+    ${JAVA_OPTS} \
+    ${APP_OPTS}
 
 exit 0
