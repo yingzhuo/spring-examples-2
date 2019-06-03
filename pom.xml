@@ -41,8 +41,8 @@
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <hsqldb.version>2.4.1</hsqldb.version>
-        <jackson.version>2.9.8</jackson.version>
-        <netty.version>4.1.33.Final</netty.version>
+        <jackson.version>2.9.9</jackson.version>
+        <netty.version>4.1.36.Final</netty.version>
     </properties>
 
     <dependencyManagement>
@@ -261,12 +261,12 @@
             <dependency>
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson</artifactId>
-                <version>3.10.3</version>
+                <version>3.10.7</version>
             </dependency>
             <dependency>
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-spring-boot-starter</artifactId>
-                <version>3.10.3</version>
+                <version>3.10.7</version>
             </dependency>
 
             <!-- mybatis -->
@@ -496,7 +496,12 @@
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.8.1</version>
+                <version>3.9</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.6</version>
             </dependency>
             <dependency>
                 <groupId>commons-logging</groupId>
