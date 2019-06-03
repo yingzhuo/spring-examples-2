@@ -24,7 +24,6 @@ public class ProjectEndpoint {
 
     @ReadOperation
     public Object prop(@Selector String name) {
-        System.out.println("1111");
         return INFO.getOrDefault(name, "");
     }
 
