@@ -4,6 +4,8 @@ MAINTAINER 应卓 yingzhor@gmail.com
 
 USER root
 
+ARG JAR_FILE
+
 WORKDIR /
 
 RUN  mkdir -p \
@@ -12,7 +14,7 @@ RUN  mkdir -p \
     /application/etc \
     /application/log
 
-COPY --chown=root:root  application.jar          /application/app.jar
+COPY --chown=root:root  $JAR_FILE                /application/app.jar
 
 COPY --chown=root:root  docker-entrypoint.sh     /docker-entrypoint.sh
 
