@@ -4,23 +4,18 @@ MAINTAINER 应卓 yingzhor@gmail.com
 
 USER root
 
-ARG JAR_FILE
-
 WORKDIR /
 
-RUN  mkdir -p \
-    /application/lib \
-    /application/tmp \
-    /application/etc \
-    /application/log
+RUN mkdir -p /application/{lib,tmp,etc,log}
 
-COPY --chown=root:root  $JAR_FILE                /application/app.jar
+COPY --chown=root:root  *.jar                    /application/app.jar
 
 COPY --chown=root:root  docker-entrypoint.sh     /docker-entrypoint.sh
+
+VOLUME /application/tmp /application/log
 
 ENV TZ Asia/Shanghai
 
 EXPOSE 8080
 
 ENTRYPOINT ["sh", "/docker-entrypoint.sh"]
-

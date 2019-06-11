@@ -3,7 +3,11 @@
 set -o pipefail
 set -e
 
-# startup app
+if [[ "$#" != 0 ]]; then
+    $@
+    exit 0
+fi
+
 exec /usr/bin/java \
     -Djava.security.egd=file:/dev/./urandom \
     -Duser.timezone=${TZ:-Asia/Shanghai} \
