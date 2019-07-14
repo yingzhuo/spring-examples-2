@@ -18,7 +18,6 @@ public class ApplicationCnfRedis {
 
     @Bean
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
-
         final ObjectMapper om = new ObjectMapper();
         om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
         om.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
@@ -44,7 +43,7 @@ public class ApplicationCnfRedis {
 
     @Bean
     public RedisTemplate<String, Long> longRedisTemplate(RedisConnectionFactory redisConnectionFactory) {
-        final RedisTemplate<String,Long> redisTemplate = new RedisTemplate<>();
+        final RedisTemplate<String, Long> redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(redisConnectionFactory);
         redisTemplate.setHashValueSerializer(new GenericToStringSerializer<>(Long.class));
         redisTemplate.setKeySerializer(new StringRedisSerializer());
