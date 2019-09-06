@@ -1,7 +1,8 @@
 spring:
   activemq:
-    broker-url: "tcp://10.211.55.3:61616"
-    user: "admin"
-    password: "admin"
+    broker-url: "failover:(tcp://192.168.201.23:61616,tcp://192.168.201.24:61616,tcp://192.168.101.25:61616)?randomize=false"
+    user: "guangu"
+    password: "D51cX4PcAbmlfaE3"
+    in-memory: true
     pool:
       enabled: false

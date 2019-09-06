@@ -36,13 +36,13 @@
 
     <properties>
         <encoding>UTF-8</encoding>
-        <spring.boot.version>2.1.6.RELEASE</spring.boot.version>
-        <spring.version>5.1.8.RELEASE</spring.version>
-        <slf4j.version>1.7.25</slf4j.version>
+        <spring.boot.version>2.1.7.RELEASE</spring.boot.version>
+        <spring.version>5.1.9.RELEASE</spring.version>
+        <slf4j.version>1.7.28</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <hsqldb.version>2.5.0</hsqldb.version>
         <jackson.version>2.9.9</jackson.version>
-        <netty.version>4.1.36.Final</netty.version>
+        <netty.version>4.1.39.Final</netty.version>
     </properties>
 
     <dependencyManagement>
