@@ -39,7 +39,7 @@
         <slf4j.version>1.7.28</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <hsqldb.version>2.5.0</hsqldb.version>
-        <jackson.version>2.9.9</jackson.version>
+        <jackson.version>2.10.0</jackson.version>
         <netty.version>4.1.41.Final</netty.version>
     </properties>
 
