@@ -20,6 +20,7 @@
         <module>spring-examples-logstash</module>
         <module>spring-examples-mongodb</module>
         <module>spring-examples-mybatis</module>
+        <module>spring-examples-protobuf</module>
         <module>spring-examples-rabbitmq</module>
         <module>spring-examples-redis-cache</module>
         <module>spring-examples-redis-session</module>

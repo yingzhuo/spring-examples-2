@@ -1,0 +1,21 @@
+syntax = "proto3";
+package protobuf;
+
+option java_package = "spring.examples.protobuf.proto";
+option java_outer_classname = "Proto";
+
+enum Gender {
+    FEMALE = 0;
+    MALE = 1;
+}
+
+message User {
+    string id = 1;
+    string name = 2;
+    Gender gender = 3;
+    bool root = 4;
+}
+
+message UserList {
+    repeated User user = 1;
+}
