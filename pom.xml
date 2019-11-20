@@ -17,6 +17,7 @@
         <module>spring-examples-https</module>
         <module>spring-examples-redis</module>
         <module>spring-examples-jpa</module>
+        <module>spring-examples-kafka</module>
         <module>spring-examples-logstash</module>
         <module>spring-examples-mongodb</module>
         <module>spring-examples-mybatis</module>
@@ -35,13 +36,13 @@
 
     <properties>
         <encoding>UTF-8</encoding>
-        <spring.boot.version>2.1.8.RELEASE</spring.boot.version>
-        <spring.version>5.1.9.RELEASE</spring.version>
-        <slf4j.version>1.7.28</slf4j.version>
+        <spring.boot.version>2.1.10.RELEASE</spring.boot.version>
+        <spring.version>5.1.11.RELEASE</spring.version>
+        <slf4j.version>1.7.29</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <hsqldb.version>2.5.0</hsqldb.version>
-        <jackson.version>2.9.9</jackson.version>
-        <netty.version>4.1.41.Final</netty.version>
+        <jackson.version>2.10.1</jackson.version>
+        <netty.version>4.1.43.Final</netty.version>
     </properties>
 
     <dependencyManagement>
@@ -232,7 +233,7 @@
             <dependency>
                 <groupId>org.apache.shiro</groupId>
                 <artifactId>shiro-spring-boot-web-starter</artifactId>
-                <version>1.4.1</version>
+                <version>1.4.2</version>
             </dependency>
 
             <!-- spring-session -->
@@ -253,12 +254,19 @@
             <dependency>
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson</artifactId>
-                <version>3.11.4</version>
+                <version>3.11.5</version>
             </dependency>
             <dependency>
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-spring-boot-starter</artifactId>
-                <version>3.11.4</version>
+                <version>3.11.5</version>
+            </dependency>
+
+            <!-- kafka -->
+            <dependency>
+                <groupId>org.springframework.kafka</groupId>
+                <artifactId>spring-kafka</artifactId>
+                <version>2.2.11.RELEASE</version>
             </dependency>
 
             <!-- mybatis -->
@@ -279,14 +287,14 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
-                <version>1.1.20</version>
+                <version>1.1.21</version>
             </dependency>
 
             <!-- mysql -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.47</version>
+                <version>5.1.48</version>
             </dependency>
 
             <!-- swagger2 -->
