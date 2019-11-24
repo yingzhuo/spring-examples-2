@@ -9,16 +9,9 @@ import org.springframework.kafka.annotation.EnableKafka;
 @Configuration
 public class ApplicationCnfKafka {
 
-//    @Bean
-//    public KafkaAdmin kafkaAdmin() {
-//        final Map<String, Object> configs = new HashMap<>();
-//        configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.99.114:9092");
-//        return new KafkaAdmin(configs);
-//    }
-
     @Bean
     public NewTopic topic1() {
-        return new NewTopic("test_topic", 2, (short) 1);
+        return new NewTopic("test_topic", 16, (short) 1);
     }
 
 }
