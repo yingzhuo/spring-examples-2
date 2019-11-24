@@ -2,13 +2,13 @@
 # 核心配置
 # ----------------------------------------------------------------------------------------------------------------------
 spring:
+  profiles:
+    active: kafka
   aop:
     auto: true
   main:
     banner-mode: log
     allow-bean-definition-overriding: true
-  banner:
-    location: banner.txt
   jackson:
     locale: "zh_CN"
     time-zone: "${TZ:Asia/Shanghai}"
@@ -30,14 +30,8 @@ spring:
     enabled: false
 
 server:
-  port: 8080
+  port: 8099
   servlet:
     context-path: "/"
   error:
     path: "/error"
-  ssl:
-    enabled: false
-    key-alias: "tomcat"
-    key-store-password: "tomcat"
-    key-store: "classpath:ssl/keystore.p12"
-    key-store-type: PKCS12

@@ -1,0 +1,14 @@
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: "192.168.99.114:9092"
+      key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+      value-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+    consumer:
+      bootstrap-servers: "192.168.99.114:9092"
+      group-id: "spring-examples"
+      key-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+      value-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+    admin:
+      properties:
+        "bootstrap.servers": "192.168.99.114:9092"

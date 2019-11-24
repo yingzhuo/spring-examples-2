@@ -5,6 +5,8 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.UUID;
+
 @RestController
 public class KController {
 
@@ -13,7 +15,7 @@ public class KController {
 
     @GetMapping("/send")
     public Object send() {
-        kafkaTemplate.send("test_topic", "hello kafka!");
+        kafkaTemplate.send("test_topic", UUID.randomUUID().toString());
         return "ok";
     }
 
