@@ -11,7 +11,7 @@ public class ApplicationCnfKafka {
 
     @Bean
     public NewTopic topic1() {
-        return new NewTopic("test_topic", 16, (short) 1);
+        return new NewTopic("test_topic", 15, (short) 1);
     }
 
 }
