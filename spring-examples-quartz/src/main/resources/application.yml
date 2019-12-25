@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: "com.mysql.jdbc.Driver"
+    url: "jdbc:mysql://10.211.55.3:3306/playground?useSSL=false&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8"
+    username: "root"
+    password: "root"
+  quartz:
+    auto-startup: true
+    job-store-type: jdbc
+    wait-for-jobs-to-complete-on-shutdown: true
+    jdbc:
+      initialize-schema: never
+    properties:
+      "org.quartz.scheduler.instanceId": "AUTO"
+      "org.quartz.jobStore.class": "org.quartz.impl.jdbcjobstore.JobStoreTX"
+      "org.quartz.jobStore.driverDelegateClass": "org.quartz.impl.jdbcjobstore.StdJDBCDelegate"
+      "org.quartz.jobStore.isClustered": "true"
+      "org.quartz.jobStore.dataSource": "dataSource"
+      "org.quartz.jobStore.tablePrefix": "QRTZ_"
+      "org.quartz.jobStore.clusterCheckinInterval": "1000"
+      "org.quartz.threadPool.class": "org.quartz.simpl.SimpleThreadPool"
+      "org.quartz.threadPool.threadCount": "10"
+      "org.quartz.threadPool.threadPriority": "5"
+      "org.quartz.threadPool.threadsInheritContextClassLoaderOfInitializingThread": "true"

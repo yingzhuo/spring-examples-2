@@ -31,18 +31,19 @@
         <module>spring-examples-shiro</module>
         <module>spring-examples-swagger2</module>
         <module>spring-examples-upload</module>
+        <module>spring-examples-quartz</module>
     </modules>
     <packaging>pom</packaging>
 
     <properties>
         <encoding>UTF-8</encoding>
-        <spring.boot.version>2.1.10.RELEASE</spring.boot.version>
-        <spring.version>5.1.11.RELEASE</spring.version>
+        <spring.boot.version>2.1.11.RELEASE</spring.boot.version>
+        <spring.version>5.1.12.RELEASE</spring.version>
         <slf4j.version>1.7.29</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <hsqldb.version>2.5.0</hsqldb.version>
         <jackson.version>2.10.1</jackson.version>
-        <netty.version>4.1.43.Final</netty.version>
+        <netty.version>4.1.44.Final</netty.version>
     </properties>
 
     <dependencyManagement>
@@ -93,6 +94,11 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-security</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-quartz</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
@@ -247,7 +253,7 @@
             <dependency>
                 <groupId>org.springframework.retry</groupId>
                 <artifactId>spring-retry</artifactId>
-                <version>1.2.4.RELEASE</version>
+                <version>1.2.5.RELEASE</version>
             </dependency>
 
             <!-- redisson -->
@@ -273,7 +279,7 @@
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>2.1.0</version>
+                <version>2.1.1</version>
             </dependency>
 
             <!-- jdbc-pool (HikariCP) -->
@@ -281,13 +287,6 @@
                 <groupId>com.zaxxer</groupId>
                 <artifactId>HikariCP</artifactId>
                 <version>3.4.1</version>
-            </dependency>
-
-            <!-- jdbc-pool (Druid) -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
-                <version>1.1.21</version>
             </dependency>
 
             <!-- mysql -->
@@ -355,7 +354,7 @@
             <dependency>
                 <groupId>net.logstash.logback</groupId>
                 <artifactId>logstash-logback-encoder</artifactId>
-                <version>5.3</version>
+                <version>6.3</version>
             </dependency>
 
             <!-- netty -->
