@@ -13,7 +13,7 @@ import java.util.Date;
 
 public final class QuartzUtils {
 
-    public JobDetail createJob(Class<? extends QuartzJobBean> jobClass, boolean isDurable, ApplicationContext context, String jobName, String jobGroup) {
+    public static JobDetail createJob(Class<? extends QuartzJobBean> jobClass, boolean isDurable, ApplicationContext context, String jobName, String jobGroup) {
         JobDetailFactoryBean factoryBean = new JobDetailFactoryBean();
         factoryBean.setJobClass(jobClass);
         factoryBean.setDurability(isDurable);
@@ -26,7 +26,7 @@ public final class QuartzUtils {
         return factoryBean.getObject();
     }
 
-    public Trigger createSimpleTrigger(String triggerName, Date startTime, int repeatCount, long repeatInterval, int misfireInstruction) {
+    public static Trigger createSimpleTrigger(String triggerName, Date startTime, int repeatCount, long repeatInterval, int misfireInstruction) {
         SimpleTriggerFactoryBean factoryBean = new SimpleTriggerFactoryBean();
         factoryBean.setName(triggerName);
         factoryBean.setStartTime(startTime);
@@ -37,7 +37,7 @@ public final class QuartzUtils {
         return factoryBean.getObject();
     }
 
-    public Trigger createCronTrigger(String triggerName, Date startTime, String cronExp, int misfireInstruction) {
+    public static Trigger createCronTrigger(String triggerName, Date startTime, String cronExp, int misfireInstruction) {
         CronTriggerFactoryBean factoryBean = new CronTriggerFactoryBean();
         factoryBean.setName(triggerName);
         factoryBean.setStartTime(startTime);
