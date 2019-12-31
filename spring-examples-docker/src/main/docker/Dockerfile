@@ -1,1 +1,3 @@
-FROM yingzhuo/springboot:8
+FROM yingzhuo/springboot:11
+
+MAINTAINER 应卓 <yingzhor@gmail.com>

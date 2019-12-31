@@ -15,6 +15,7 @@
         <module>spring-examples-endpoint</module>
         <module>spring-examples-excel-view</module>
         <module>spring-examples-https</module>
+        <module>spring-examples-event</module>
         <module>spring-examples-redis</module>
         <module>spring-examples-jpa</module>
         <module>spring-examples-kafka</module>
