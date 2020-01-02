@@ -27,8 +27,6 @@ public interface Principal extends Serializable {
 
     public static final class SimplePrincipal implements Principal {
 
-        private static final long serialVersionUID = -2072922021066735651L;
-
         private User user;
         private List<String> roles;
 
