@@ -25,7 +25,7 @@
             <artifactId>spring-boot-starter-quartz</artifactId>
         </dependency>
 
-        <!-- jdbc-pool (HikariCP) -->
+        <!-- jdbc-pool -->
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>

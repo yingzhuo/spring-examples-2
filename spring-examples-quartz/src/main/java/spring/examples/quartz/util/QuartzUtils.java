@@ -20,7 +20,7 @@ public final class QuartzUtils {
         factoryBean.setName(jobName);
         factoryBean.setGroup(jobGroup);
         factoryBean.setApplicationContext(context);
-//        factoryBean.setJobDataAsMap(); TODO:
+//        factoryBean.setJobDataAsMap(); TODO
         factoryBean.afterPropertiesSet();
 
         return factoryBean.getObject();
