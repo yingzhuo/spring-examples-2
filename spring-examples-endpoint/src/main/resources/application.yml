@@ -1,9 +1,26 @@
 # ----------------------------------------------------------------------------------------------------------------------
 # Actuator配置
 # ----------------------------------------------------------------------------------------------------------------------
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
+      roles: ["ACTUATOR"]
+
 management:
+  endpoint:
+    shutdown:
+      enabled: false
+    health:
+      show-details: always
   endpoints:
     web:
       base-path: "/actuator"
       exposure:
         include: "*"
+  info:
+    git:
+      mode: full
+
+info: {}
