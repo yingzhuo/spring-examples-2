@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
@@ -13,6 +14,7 @@ import javax.sql.DataSource;
         annotationClass = Mapper.class,
         basePackages = "spring.examples.mybatis"
 )
+@EnableTransactionManagement
 @Configuration
 public class ApplicationCnfMybatis {
 
