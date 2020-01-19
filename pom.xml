@@ -13,9 +13,10 @@
         <module>spring-examples-docker</module>
         <module>spring-examples-elasticsearch</module>
         <module>spring-examples-endpoint</module>
+        <module>spring-examples-event</module>
         <module>spring-examples-excel-view</module>
         <module>spring-examples-https</module>
-        <module>spring-examples-event</module>
+        <module>spring-examples-jackson</module>
         <module>spring-examples-redis</module>
         <module>spring-examples-jpa</module>
         <module>spring-examples-kafka</module>
@@ -42,7 +43,7 @@
         <slf4j.version>1.7.30</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <hsqldb.version>2.5.0</hsqldb.version>
-        <jackson.version>2.10.1</jackson.version>
+        <jackson.version>2.10.2</jackson.version>
         <netty.version>4.1.45.Final</netty.version>
     </properties>
 
@@ -84,12 +85,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-jdbc</artifactId>
                 <version>${spring.boot.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.tomcat</groupId>
-                        <artifactId>tomcat-jdbc</artifactId>
-                    </exclusion>
-                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-validation</artifactId>
+                <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -113,11 +113,6 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-freemarker</artifactId>
-                <version>${spring.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-jpa</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
@@ -134,11 +129,6 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-amqp</artifactId>
-                <version>${spring.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-validation</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
 

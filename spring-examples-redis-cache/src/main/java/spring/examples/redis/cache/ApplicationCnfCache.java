@@ -55,7 +55,8 @@ public class ApplicationCnfCache extends CachingConfigurerSupport {
 
         return builder
                 .withInitialCacheConfigurations(Collections.emptyMap()) // 不同的cache-name可以有不同的配置，我这里不需要
-                .cacheDefaults(cnf).build();
+                .cacheDefaults(cnf)
+                .build();
     }
 
 }

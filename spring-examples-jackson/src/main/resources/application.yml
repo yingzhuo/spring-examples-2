@@ -1,0 +1,16 @@
+spring:
+  jackson:
+    locale: "zh_CN"
+    date-format: "yyyy-MM-dd HH:mm:ss.SSS"
+    default-property-inclusion: always
+    serialization:
+      indent-output: true
+      fail-on-self-references: true
+      fail-on-empty-beans: false
+      write-dates-as-timestamps: false
+      write-null-map-values: true
+      write-empty-json-arrays: true
+      write-single-elem-arrays-unwrapped: false
+      write-enums-using-to-string: true
+    deserialization:
+      fail-on-unknown-properties: false
