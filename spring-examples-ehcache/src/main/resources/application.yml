@@ -1,0 +1,51 @@
+# ----------------------------------------------------------------------------------------------------------------------
+# Debug Mode
+# ----------------------------------------------------------------------------------------------------------------------
+spring:
+  profiles: debug
+debug: true
+
+---
+
+# ----------------------------------------------------------------------------------------------------------------------
+# 核心配置
+# ----------------------------------------------------------------------------------------------------------------------
+spring:
+  application:
+    name: "playground"
+  profiles:
+    active: dev
+  aop:
+    auto: true
+  main:
+    banner-mode: log
+    allow-bean-definition-overriding: true
+  banner:
+    location: banner.txt
+  jackson:
+    locale: "zh_CN"
+    date-format: "yyyy-MM-dd HH:mm:ss.SSS"
+    default-property-inclusion: always
+    serialization:
+      indent-output: true
+      fail-on-self-references: true
+      fail-on-empty-beans: false
+      write-dates-as-timestamps: false
+      write-null-map-values: true
+      write-empty-json-arrays: true
+      write-single-elem-arrays-unwrapped: false
+      write-enums-using-to-string: true
+    deserialization:
+      fail-on-unknown-properties: false
+  jmx:
+    enabled: false
+  cache:
+    jcache:
+      config: "classpath:/META-INF/ehcache.xml"
+
+server:
+  port: 8080
+  servlet:
+    context-path: "/"
+  error:
+    path: "/error"
