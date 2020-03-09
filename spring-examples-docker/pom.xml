@@ -50,12 +50,6 @@
                                         <include name="${project.build.finalName}.jar"/>
                                     </fileset>
                                 </copy>
-                                <delete>
-                                    <fileset dir="${project.basedir}/target">
-                                        <include name="${project.build.finalName}.jar"/>
-                                        <include name="${project.build.finalName}.jar.original"/>
-                                    </fileset>
-                                </delete>
                             </target>
                         </configuration>
                         <goals>

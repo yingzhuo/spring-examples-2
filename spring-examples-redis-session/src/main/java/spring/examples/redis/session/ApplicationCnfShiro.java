@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Primary;
 import spring.examples.redis.session.security.PrimaryRealm;
 
 @Configuration
-public class ApplicationConfigShiro {
+public class ApplicationCnfShiro {
 
     @Bean
     public static LifecycleBeanPostProcessor lifecycleBeanPostProcessor() {

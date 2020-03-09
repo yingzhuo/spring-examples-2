@@ -17,7 +17,6 @@
                 <event-ordering-mode>UNORDERED</event-ordering-mode>
                 <events-to-fire-on>CREATED</events-to-fire-on>
                 <events-to-fire-on>EXPIRED</events-to-fire-on>
-                <events-to-fire-on>EXPIRED</events-to-fire-on>
             </listener>
         </listeners>
 

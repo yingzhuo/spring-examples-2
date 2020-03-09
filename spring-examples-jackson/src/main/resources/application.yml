@@ -2,6 +2,7 @@ spring:
   jackson:
     locale: "zh_CN"
     date-format: "yyyy-MM-dd HH:mm:ss.SSS"
+    time-zone: "Asia/Shanghai"
     default-property-inclusion: always
     serialization:
       indent-output: true
