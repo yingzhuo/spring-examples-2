@@ -44,12 +44,13 @@
                             <target>
                                 <copy todir="${project.basedir}/target/docker-context" force="true">
                                     <fileset dir="${project.basedir}/src/main/docker">
-                                        <include name="*"/>
+                                        <include name="**/*"/>
                                     </fileset>
                                     <fileset dir="${project.basedir}/target">
-                                        <include name="${project.build.finalName}.jar"/>
+                                        <include name="**/${project.build.finalName}.jar"/>
                                     </fileset>
                                 </copy>
+                                <touch file="${project.basedir}/target/docker-context/.configkeep"/>
                             </target>
                         </configuration>
                         <goals>

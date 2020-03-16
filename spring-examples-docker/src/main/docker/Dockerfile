@@ -1,5 +1,7 @@
-FROM yingzhuo/springboot:11
+FROM yingzhuo/springboot:8
 
-LABEL maintaine="应卓 yingzhor@gmail.com"
+LABEL maintaine="应卓"
+
+USER root
 
 EXPOSE 8080
