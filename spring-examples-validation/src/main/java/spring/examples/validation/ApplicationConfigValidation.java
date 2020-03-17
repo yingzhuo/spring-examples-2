@@ -8,11 +8,8 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.i18n.FixedLocaleResolver;
+import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
-import org.springframework.web.servlet.i18n.SessionLocaleResolver;
-
-import java.util.Locale;
 
 @Configuration
 public class ApplicationConfigValidation implements WebMvcConfigurer {
@@ -34,14 +31,19 @@ public class ApplicationConfigValidation implements WebMvcConfigurer {
 
     @Bean
     public LocaleResolver localeResolver() {
-        return new SessionLocaleResolver();
+        return new CookieLocaleResolver();
     }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();
+        registry.addInterceptor(createLocaleChangeInterceptor()).addPathPatterns("/", "/**");
+    }
+
+    private LocaleChangeInterceptor createLocaleChangeInterceptor() {
+        final LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();
         interceptor.setIgnoreInvalidLocale(true);
         interceptor.setParamName("lang");
-        registry.addInterceptor(interceptor);
+        return interceptor;
     }
+
 }
