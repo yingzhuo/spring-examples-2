@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.UUID;
 
 @RestController
-public class KController {
+public class TestController {
 
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
