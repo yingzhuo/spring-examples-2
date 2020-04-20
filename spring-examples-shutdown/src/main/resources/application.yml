@@ -1,0 +1,6 @@
+# 优雅关闭
+graceful:
+  shutdown:
+    enabled: true
+    timeout: 30s
+    wait: 15s

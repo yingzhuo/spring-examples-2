@@ -33,6 +33,7 @@
         <module>spring-examples-retry</module>
         <module>spring-examples-scheduling</module>
         <module>spring-examples-shiro</module>
+        <module>spring-examples-shutdown</module>
         <module>spring-examples-swagger2</module>
         <module>spring-examples-upload</module>
         <module>spring-examples-validation</module>
@@ -324,6 +325,13 @@
                 <artifactId>lombok</artifactId>
                 <version>1.18.12</version>
                 <scope>provided</scope>
+            </dependency>
+
+            <!-- shutdown -->
+            <dependency>
+                <groupId>com.github.timpeeters</groupId>
+                <artifactId>spring-boot-graceful-shutdown</artifactId>
+                <version>2.2.1</version>
             </dependency>
 
             <!-- logback -->
