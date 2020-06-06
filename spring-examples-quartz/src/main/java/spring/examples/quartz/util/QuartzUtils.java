@@ -13,6 +13,9 @@ import java.util.Date;
 
 public final class QuartzUtils {
 
+    private QuartzUtils() {
+    }
+
     public static JobDetail createJob(Class<? extends QuartzJobBean> jobClass, boolean isDurable, ApplicationContext context, String jobName, String jobGroup) {
         JobDetailFactoryBean factoryBean = new JobDetailFactoryBean();
         factoryBean.setJobClass(jobClass);
@@ -49,8 +52,5 @@ public final class QuartzUtils {
             throw new IllegalArgumentException(e.getMessage(), e);
         }
         return factoryBean.getObject();
-    }
-
-    private QuartzUtils() {
     }
 }

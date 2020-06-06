@@ -9,15 +9,14 @@ import java.io.Serializable;
 @Setter
 public class Name implements Serializable {
 
+    private String firstName;
+    private String lastName;
+
     public static Name of(String firstName, String lastName) {
         Name name = new Name();
         name.setFirstName(firstName);
         name.setLastName(lastName);
         return name;
     }
-
-    private String firstName;
-
-    private String lastName;
 
 }

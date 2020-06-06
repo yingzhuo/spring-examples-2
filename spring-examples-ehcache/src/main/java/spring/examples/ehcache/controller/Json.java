@@ -5,15 +5,14 @@ import java.util.HashMap;
 
 public class Json implements Serializable {
 
-    public static Json newInstance() {
-        return new Json();
-    }
-
     private String code = "0";
     private String message = "";
     private Payload payload = new Payload();
-
     private Json() {
+    }
+
+    public static Json newInstance() {
+        return new Json();
     }
 
     public Json code(String code) {

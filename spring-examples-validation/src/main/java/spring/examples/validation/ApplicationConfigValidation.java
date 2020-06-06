@@ -6,12 +6,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.LocaleResolver;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.i18n.CookieLocaleResolver;
-import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
+import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 @Configuration
 public class ApplicationConfigValidation implements WebMvcConfigurer {
@@ -22,32 +23,39 @@ public class ApplicationConfigValidation implements WebMvcConfigurer {
         bean.setBasenames("classpath:config/i18n/messages");
         bean.setDefaultEncoding("UTF-8");
         bean.setDefaultLocale(Locale.CHINA);
-        bean.setCacheSeconds(600);
+        bean.setCacheSeconds(-1);
         return bean;
     }
 
     @Bean
     public LocalValidatorFactoryBean getValidator(MessageSource messageSource) {
+        final Map<String, String> propertyMap = new HashMap<>();
+        propertyMap.put("hibernate.validator.fail_fast", "false");
+
         final LocalValidatorFactoryBean bean = new LocalValidatorFactoryBean();
         bean.setValidationMessageSource(messageSource);
+        bean.setValidationPropertyMap(propertyMap);
         return bean;
     }
 
     @Bean
     public LocaleResolver localeResolver() {
-        return new CookieLocaleResolver();
+        final AcceptHeaderLocaleResolver bean = new AcceptHeaderLocaleResolver();
+        bean.setDefaultLocale(Locale.CHINESE);
+        bean.setSupportedLocales(Arrays.asList(Locale.CHINESE, Locale.ENGLISH));
+        return bean;
     }
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(createLocaleChangeInterceptor()).addPathPatterns("/", "/**");
-    }
-
-    private LocaleChangeInterceptor createLocaleChangeInterceptor() {
-        final LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();
-        interceptor.setIgnoreInvalidLocale(true);
-        interceptor.setParamName("lang");
-        return interceptor;
-    }
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(createLocaleChangeInterceptor()).addPathPatterns("/", "/**");
+//    }
+//
+//    private LocaleChangeInterceptor createLocaleChangeInterceptor() {
+//        final LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();
+//        interceptor.setIgnoreInvalidLocale(true);
+//        interceptor.setParamName("lang");
+//        return interceptor;
+//    }
 
 }

@@ -12,4 +12,4 @@ mybatis:
   check-config-location: false
   type-aliases-package: "spring.examples.mybatis"
   mapper-locations:
-  - "classpath*:/mybatis-mapper/*.xml"
+    - "classpath*:/mybatis-mapper/*.xml"

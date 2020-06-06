@@ -10,6 +10,11 @@ import org.springframework.core.type.filter.TypeFilter;
 
 import java.util.regex.Pattern;
 
+
+/*
+ * 其实没有必要将Mapper的实例放入ApplicationContext
+ * 这里例子放在这里作为参考
+ */
 @Configuration
 @ComponentScan(
         basePackages = "spring.examples.mapstruct",
