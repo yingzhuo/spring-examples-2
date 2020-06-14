@@ -10,6 +10,7 @@
     <modules>
         <module>spring-examples-activemq</module>
         <module>spring-examples-async</module>
+        <module>spring-examples-classpath-scanning</module>
         <module>spring-examples-ehcache</module>
         <module>spring-examples-elasticsearch</module>
         <module>spring-examples-endpoint</module>
