@@ -4,6 +4,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
+import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
 
 @Mapper
 public interface CarVOMapper {
@@ -15,5 +17,14 @@ public interface CarVOMapper {
 
     @Mapping(source = "seatCount", target = "numberOfSeats")
     public void copyTo(CarVO vo, @MappingTarget Car car);
+
+    // for ConversionService
+    @Component
+    public static class C1 implements Converter<CarVO, Car> {
+        @Override
+        public Car convert(CarVO source) {
+            return INSTANCE.to(source);
+        }
+    }
 
 }
