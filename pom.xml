@@ -35,12 +35,13 @@
         <module>spring-examples-shutdown</module>
         <module>spring-examples-upload</module>
         <module>spring-examples-validation</module>
+        <module>spring-examples-actuator-health</module>
     </modules>
     <packaging>pom</packaging>
 
     <properties>
         <encoding>UTF-8</encoding>
-        <spring.boot.version>2.2.8.RELEASE</spring.boot.version>
+        <spring.boot.version>2.3.1.RELEASE</spring.boot.version>
         <spring.version>5.2.7.RELEASE</spring.version>
         <slf4j.version>1.7.30</slf4j.version>
         <logback.version>1.2.3</logback.version>
@@ -320,13 +321,6 @@
                 <scope>provided</scope>
             </dependency>
 
-            <!-- shutdown -->
-            <dependency>
-                <groupId>com.github.timpeeters</groupId>
-                <artifactId>spring-boot-graceful-shutdown</artifactId>
-                <version>2.2.2</version>
-            </dependency>
-
             <!-- logback -->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
@@ -343,7 +337,7 @@
             <dependency>
                 <groupId>net.logstash.logback</groupId>
                 <artifactId>logstash-logback-encoder</artifactId>
-                <version>6.3</version>
+                <version>6.4</version>
             </dependency>
 
             <!-- protobuf -->

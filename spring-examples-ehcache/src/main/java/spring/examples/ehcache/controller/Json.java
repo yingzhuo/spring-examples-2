@@ -8,6 +8,7 @@ public class Json implements Serializable {
     private String code = "0";
     private String message = "";
     private Payload payload = new Payload();
+
     private Json() {
     }
 
