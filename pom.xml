@@ -357,6 +357,13 @@
                 <version>1.4</version>
             </dependency>
 
+            <!-- pooled-jms -->
+            <dependency>
+                <groupId>org.messaginghub</groupId>
+                <artifactId>pooled-jms</artifactId>
+                <version>1.1.1</version>
+            </dependency>
+
             <!-- hdrhistogram -->
             <dependency>
                 <groupId>org.hdrhistogram</groupId>

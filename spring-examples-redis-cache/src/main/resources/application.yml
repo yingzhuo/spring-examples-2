@@ -9,3 +9,5 @@ spring:
     password: "root"
   cache:
     type: redis
+    cache-names:
+      - users
