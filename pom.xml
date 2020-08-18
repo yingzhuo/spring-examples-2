@@ -31,6 +31,7 @@
         <module>spring-examples-rabbitmq</module>
         <module>spring-examples-redis-cache</module>
         <module>spring-examples-redis-session</module>
+        <module>spring-examples-resttemplate</module>
         <module>spring-examples-scheduling</module>
         <module>spring-examples-shutdown</module>
         <module>spring-examples-upload</module>
@@ -41,7 +42,7 @@
 
     <properties>
         <encoding>UTF-8</encoding>
-        <spring.boot.version>2.3.2.RELEASE</spring.boot.version>
+        <spring.boot.version>2.3.3.RELEASE</spring.boot.version>
         <spring.version>5.2.8.RELEASE</spring.version>
         <slf4j.version>1.7.30</slf4j.version>
         <logback.version>1.2.3</logback.version>
@@ -94,6 +95,11 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-json</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
             <dependency>

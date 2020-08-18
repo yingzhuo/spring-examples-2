@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS,GMT+8}]%-5level %logger{72}[%L] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--
+      | 一般性日志
+      -->
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="spring.examples" level="TRACE"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
