@@ -1,7 +1,7 @@
 # ----------------------------------------------------------------------------------------------------------------------
 # 预构建阶段
 # ----------------------------------------------------------------------------------------------------------------------
-FROM registry.cn-shanghai.aliyuncs.com/yingzhuo/springboot:8 as builder
+FROM registry.cn-shanghai.aliyuncs.com/yingzhuo/springboot:8 AS builder
 
 # 拷贝Jar
 COPY *.jar app.jar
