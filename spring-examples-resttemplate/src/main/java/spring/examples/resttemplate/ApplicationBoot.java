@@ -32,7 +32,8 @@ public class ApplicationBoot implements ApplicationRunner {
         headers.set(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);
 
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl("http://localhost:8080/{path}")
-                .queryParam("foo", "foo")
+                .queryParam("foo", "foo", "foo1")
+                .queryParam("bar", "bar")
                 .uriVariables(Collections.singletonMap("path", "author"));
 
         Author body = new Author("hello", "hello@foo.com");
