@@ -24,9 +24,6 @@ public class ApplicationCnfCache extends CachingConfigurerSupport {
     @Autowired
     private RedisConnectionFactory redisConnectionFactory;
 
-    @Autowired
-    private RedisSerializer<Object> objectRedisSerializer;
-
     @Override
     public KeyGenerator keyGenerator() {
         return (target, method, params) -> {
@@ -47,7 +44,7 @@ public class ApplicationCnfCache extends CachingConfigurerSupport {
                 RedisCacheConfiguration.defaultCacheConfig()
                         .entryTtl(Duration.ofSeconds(3600))
                         .disableCachingNullValues()
-                        .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(objectRedisSerializer));
+                        .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(RedisSerializer.json()));
 
         final RedisCacheManager.RedisCacheManagerBuilder builder = RedisCacheManager
                 .RedisCacheManagerBuilder
