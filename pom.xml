@@ -18,6 +18,7 @@
         <module>spring-examples-excel-view</module>
         <module>spring-examples-https</module>
         <module>spring-examples-jackson</module>
+        <module>spring-examples-jasypt</module>
         <module>spring-examples-redis</module>
         <module>spring-examples-jpa</module>
         <module>spring-examples-kafka</module>
@@ -371,6 +372,13 @@
                 <groupId>com.googlecode.protobuf-java-format</groupId>
                 <artifactId>protobuf-java-format</artifactId>
                 <version>1.4</version>
+            </dependency>
+
+            <!-- jasypt -->
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>3.0.3</version>
             </dependency>
 
             <!-- pooled-jms -->
