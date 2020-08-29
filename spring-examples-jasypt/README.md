@@ -5,5 +5,5 @@
 加密密码只能由命令行传入
 
 ```bash
-mvn jasypt:encrypt -Djasypt.encryptor.password="spring-examples-2"
+mvn jasypt:encrypt -Djasypt.encryptor.password="spring-examples-2" -D
 ```
