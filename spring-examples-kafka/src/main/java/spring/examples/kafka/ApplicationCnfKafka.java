@@ -17,7 +17,7 @@ public class ApplicationCnfKafka {
     public NewTopic topic1() {
         return TopicBuilder.name("test_topic")
                 .partitions(3)
-                .replicas(3)
+                .replicas(1)
                 .build();
     }
 
