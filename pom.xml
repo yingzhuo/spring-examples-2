@@ -11,7 +11,6 @@
         <module>spring-examples-activemq</module>
         <module>spring-examples-async</module>
         <module>spring-examples-classpath-scanning</module>
-        <module>spring-examples-docker</module>
         <module>spring-examples-ehcache</module>
         <module>spring-examples-elasticsearch</module>
         <module>spring-examples-event</module>
@@ -27,7 +26,6 @@
         <module>spring-examples-mongodb</module>
         <module>spring-examples-mybatis</module>
         <module>spring-examples-prometheus</module>
-        <module>spring-examples-protobuf</module>
         <module>spring-examples-quartz</module>
         <module>spring-examples-rabbitmq</module>
         <module>spring-examples-redis-cache</module>
@@ -43,13 +41,13 @@
 
     <properties>
         <encoding>UTF-8</encoding>
-        <spring.boot.version>2.3.6.RELEASE</spring.boot.version>
-        <spring.version>5.2.11.RELEASE</spring.version>
+        <spring.boot.version>2.4.4</spring.boot.version>
+        <spring.version>5.3.5</spring.version>
         <slf4j.version>1.7.30</slf4j.version>
         <logback.version>1.2.3</logback.version>
-        <hsqldb.version>2.5.0</hsqldb.version>
-        <jackson.version>2.12.0</jackson.version>
-        <netty.version>4.1.54.Final</netty.version>
+        <hsqldb.version>2.5.1</hsqldb.version>
+        <jackson.version>2.12.2</jackson.version>
+        <netty.version>4.1.60.Final</netty.version>
     </properties>
 
     <dependencyManagement>
@@ -260,14 +258,14 @@
             <dependency>
                 <groupId>org.springframework.kafka</groupId>
                 <artifactId>spring-kafka</artifactId>
-                <version>2.6.3</version>
+                <version>2.6.7</version>
             </dependency>
 
             <!-- mapstruct -->
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct</artifactId>
-                <version>1.4.1.Final</version>
+                <version>1.4.2.Final</version>
             </dependency>
 
             <!-- mybatis -->
@@ -286,26 +284,26 @@
             <dependency>
                 <groupId>com.zaxxer</groupId>
                 <artifactId>HikariCP</artifactId>
-                <version>3.4.5</version>
+                <version>4.0.3</version>
             </dependency>
 
             <!-- mysql -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.22</version>
+                <version>8.0.23</version>
             </dependency>
 
             <!-- prometheus -->
             <dependency>
                 <groupId>io.micrometer</groupId>
                 <artifactId>micrometer-core</artifactId>
-                <version>1.6.1</version>
+                <version>1.6.5</version>
             </dependency>
             <dependency>
                 <groupId>io.micrometer</groupId>
                 <artifactId>micrometer-registry-prometheus</artifactId>
-                <version>1.6.1</version>
+                <version>1.6.5</version>
             </dependency>
 
             <!-- slf4j -->
@@ -334,7 +332,7 @@
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.12</version>
+                <version>1.18.18</version>
                 <scope>provided</scope>
             </dependency>
 
@@ -354,24 +352,7 @@
             <dependency>
                 <groupId>net.logstash.logback</groupId>
                 <artifactId>logstash-logback-encoder</artifactId>
-                <version>6.4</version>
-            </dependency>
-
-            <!-- protobuf -->
-            <dependency>
-                <groupId>com.google.protobuf</groupId>
-                <artifactId>protobuf-java</artifactId>
-                <version>3.11.4</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.protobuf</groupId>
-                <artifactId>protobuf-java-util</artifactId>
-                <version>3.11.4</version>
-            </dependency>
-            <dependency>
-                <groupId>com.googlecode.protobuf-java-format</groupId>
-                <artifactId>protobuf-java-format</artifactId>
-                <version>1.4</version>
+                <version>6.6</version>
             </dependency>
 
             <!-- jasypt -->
@@ -544,19 +525,19 @@
             <dependency>
                 <groupId>org.ehcache</groupId>
                 <artifactId>ehcache</artifactId>
-                <version>3.9.0</version>
+                <version>3.9.2</version>
             </dependency>
 
             <!-- commons -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>30.0-jre</version>
+                <version>30.1-jre</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.11</version>
+                <version>3.12.0</version>
             </dependency>
             <dependency>
                 <groupId>commons-io</groupId>

@@ -11,7 +11,7 @@ import java.io.Serializable;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(indexName = "spring_examples_es", type = "employee")
+@Document(indexName = "spring_examples_es")
 public class Employee implements Serializable {
 
     @Id
