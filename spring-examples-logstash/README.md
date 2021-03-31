@@ -1,6 +1,5 @@
 # spring-examples-logstash
 
-
 logstash配置文件
 
 ```
