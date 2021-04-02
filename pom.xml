@@ -47,7 +47,7 @@
         <logback.version>1.2.3</logback.version>
         <hsqldb.version>2.5.1</hsqldb.version>
         <jackson.version>2.12.2</jackson.version>
-        <netty.version>4.1.60.Final</netty.version>
+        <netty.version>4.1.62.Final</netty.version>
     </properties>
 
     <dependencyManagement>
@@ -532,11 +532,6 @@
                 <artifactId>ehcache</artifactId>
                 <version>3.9.2</version>
             </dependency>
-            <dependency>
-                <groupId>com.github.ben-manes.caffeine</groupId>
-                <artifactId>caffeine</artifactId>
-                <version>3.0.1</version>
-            </dependency>
 
             <!-- commons -->
             <dependency>
@@ -596,7 +591,7 @@
                         <path>
                             <groupId>org.mapstruct</groupId>
                             <artifactId>mapstruct-processor</artifactId>
-                            <version>1.3.1.Final</version>
+                            <version>1.4.2.Final</version>
                         </path>
                         <path>
                             <groupId>org.projectlombok</groupId>
