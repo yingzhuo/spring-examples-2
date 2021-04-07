@@ -31,6 +31,7 @@
         <module>spring-examples-redis-cache</module>
         <module>spring-examples-redis-session</module>
         <module>spring-examples-resttemplate</module>
+        <module>spring-examples-retry</module>
         <module>spring-examples-scheduling</module>
         <module>spring-examples-shutdown</module>
         <module>spring-examples-upload</module>
@@ -243,6 +244,13 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc</artifactId>
                 <version>${spring.version}</version>
+            </dependency>
+
+            <!-- spring-retry -->
+            <dependency>
+                <groupId>org.springframework.retry</groupId>
+                <artifactId>spring-retry</artifactId>
+                <version>1.3.1</version>
             </dependency>
 
             <!-- spring-shiro -->
