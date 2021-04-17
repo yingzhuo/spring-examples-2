@@ -3,10 +3,10 @@
 # ----------------------------------------------------------------------------------------------------------------------
 spring:
   rabbitmq:
-    host: "10.211.55.26"
+    host: "192.168.10.115"
     port: 5672
-    username: "admin"
-    password: "admin"
+    username: "root"
+    password: "root"
     virtual-host: "/"
     listener:
       simple:

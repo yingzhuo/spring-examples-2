@@ -23,6 +23,7 @@ public class Receiver {
     private void sendAck(Message message, Channel channel) {
         try {
             channel.basicAck(message.getMessageProperties().getDeliveryTag(), true);
+//            channel.basicReject(message.getMessageProperties().getDeliveryTag(), true);
         } catch (IOException e) {
             log.error(e.getMessage(), e);
         }
