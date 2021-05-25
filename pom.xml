@@ -35,6 +35,7 @@
         <module>spring-examples-upload</module>
         <module>spring-examples-validation</module>
         <module>spring-examples-actuator-health</module>
+        <module>spring-examples-flyway</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -274,6 +275,13 @@
                 <groupId>org.springframework.kafka</groupId>
                 <artifactId>spring-kafka</artifactId>
                 <version>2.6.8</version>
+            </dependency>
+
+            <!-- flyway -->
+            <dependency>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-core</artifactId>
+                <version>7.9.1</version>
             </dependency>
 
             <!-- mapstruct -->
