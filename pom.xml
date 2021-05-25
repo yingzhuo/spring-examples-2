@@ -12,7 +12,6 @@
         <module>spring-examples-async</module>
         <module>spring-examples-classpath-scanning</module>
         <module>spring-examples-ehcache</module>
-        <module>spring-examples-elasticsearch</module>
         <module>spring-examples-event</module>
         <module>spring-examples-excel-view</module>
         <module>spring-examples-https</module>
