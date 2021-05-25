@@ -14,6 +14,7 @@
         <module>spring-examples-ehcache</module>
         <module>spring-examples-event</module>
         <module>spring-examples-excel-view</module>
+        <module>spring-examples-flyway</module>
         <module>spring-examples-https</module>
         <module>spring-examples-jackson</module>
         <module>spring-examples-redis</module>
@@ -35,7 +36,6 @@
         <module>spring-examples-upload</module>
         <module>spring-examples-validation</module>
         <module>spring-examples-actuator-health</module>
-        <module>spring-examples-flyway</module>
     </modules>
     <packaging>pom</packaging>
 
