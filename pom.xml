@@ -37,6 +37,7 @@
         <module>spring-examples-upload</module>
         <module>spring-examples-validation</module>
         <module>spring-examples-actuator-health</module>
+        <module>spring-examples-xxljob</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -274,6 +275,13 @@
                 <groupId>org.springframework.session</groupId>
                 <artifactId>spring-session-data-redis</artifactId>
                 <version>2.1.13.RELEASE</version>
+            </dependency>
+
+            <!-- xxljob -->
+            <dependency>
+                <groupId>com.github.yingzhuo</groupId>
+                <artifactId>xxljob-spring-boot-starter</artifactId>
+                <version>2.3.0-1</version>
             </dependency>
 
             <!-- kafka -->
