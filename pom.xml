@@ -20,6 +20,7 @@
         <module>spring-examples-jackson</module>
         <module>spring-examples-redis</module>
         <module>spring-examples-jpa</module>
+        <module>spring-examples-junit</module>
         <module>spring-examples-kafka</module>
         <module>spring-examples-logstash</module>
         <module>spring-examples-mapstruct</module>
