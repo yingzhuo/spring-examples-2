@@ -1,31 +1,32 @@
 package spring.examples.redis.cache;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.cache.CacheManager;
-import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.interceptor.KeyGenerator;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
 import org.springframework.data.redis.cache.RedisCacheManager;
+import org.springframework.data.redis.cache.RedisCacheWriter;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.serializer.RedisSerializationContext;
 import org.springframework.data.redis.serializer.RedisSerializer;
 
 import java.time.Duration;
-import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 
-@Configuration
 @EnableCaching
-@AutoConfigureAfter(ApplicationCnfRedis.class)
-public class ApplicationCnfCache extends CachingConfigurerSupport {
+@Configuration
+public class ApplicationCnfCache {
 
     @Autowired
     private RedisConnectionFactory redisConnectionFactory;
 
-    @Override
-    public KeyGenerator keyGenerator() {
+    @Bean(name = {"cacheKeyGenerator", "kg"})
+    public KeyGenerator cacheKeyGenerator() {
         return (target, method, params) -> {
             StringBuilder sb = new StringBuilder();
             sb.append(target.getClass().getName());
@@ -38,22 +39,27 @@ public class ApplicationCnfCache extends CachingConfigurerSupport {
         };
     }
 
-    @Override
+    @Bean
+    RedisCacheWriter redisCacheWriter() {
+        return RedisCacheWriter.lockingRedisCacheWriter(redisConnectionFactory);
+    }
+
+    @Bean
     public CacheManager cacheManager() {
-        final RedisCacheConfiguration cnf =
-                RedisCacheConfiguration.defaultCacheConfig()
-                        .entryTtl(Duration.ofSeconds(3600))
-                        .disableCachingNullValues()
-                        .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(RedisSerializer.json()));
+        final RedisCacheConfiguration defaults = createConfiguration(Duration.ofSeconds(3600L));
 
-        final RedisCacheManager.RedisCacheManagerBuilder builder = RedisCacheManager
-                .RedisCacheManagerBuilder
-                .fromConnectionFactory(redisConnectionFactory);
+        final Map<String, RedisCacheConfiguration> configs = new HashMap<>();
+        configs.put("cacheName", createConfiguration(Duration.ofSeconds(7200L)));
 
-        return builder
-                .withInitialCacheConfigurations(Collections.emptyMap()) // 不同的cache-name可以有不同的配置，我这里不需要
-                .cacheDefaults(cnf)
-                .build();
+        return new RedisCacheManager(redisCacheWriter(), defaults, configs);
+    }
+
+    private RedisCacheConfiguration createConfiguration(Duration ttl) {
+        return RedisCacheConfiguration.defaultCacheConfig()
+                .entryTtl(Objects.requireNonNull(ttl))
+                .serializeValuesWith(
+                        RedisSerializationContext.SerializationPair.fromSerializer(RedisSerializer.json())
+                );
     }
 
 }

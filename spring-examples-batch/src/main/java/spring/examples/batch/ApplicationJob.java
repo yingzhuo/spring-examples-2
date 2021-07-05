@@ -25,22 +25,19 @@ import java.util.UUID;
 @EnableBatchProcessing
 class ApplicationJob {
 
+    @Autowired
+    private JobBuilderFactory jobBuilder;
+    @Autowired
+    private StepBuilderFactory stepBuilder;
+    @Autowired
+    private JobExplorer jobExplorer;
+    @Autowired
+    private JobLauncher jobLauncher;
+
     @Bean
     TaskExecutor taskExecutor() {
         return new SimpleAsyncTaskExecutor("spring-example-batch-");
     }
-
-    @Autowired
-    private JobBuilderFactory jobBuilder;
-
-    @Autowired
-    private StepBuilderFactory stepBuilder;
-
-    @Autowired
-    private JobExplorer jobExplorer;
-
-    @Autowired
-    private JobLauncher jobLauncher;
 
     @PostConstruct
     private void init() throws Exception {
