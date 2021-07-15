@@ -54,7 +54,8 @@
 
         <lombok.version>1.18.20</lombok.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
-        <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
+        <org.mapstruct.extensions.spring.version>0.1.0</org.mapstruct.extensions.spring.version>
+        <lombok.mapstruct.binding.version>0.2.0</lombok.mapstruct.binding.version>
     </properties>
 
     <dependencyManagement>
@@ -296,19 +297,19 @@
             <dependency>
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-core</artifactId>
-                <version>7.11.1</version>
+                <version>7.11.2</version>
             </dependency>
 
             <!-- mapstruct -->
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct</artifactId>
-                <version>1.4.2.Final</version>
+                <version>${mapstruct.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.mapstruct.extensions.spring</groupId>
                 <artifactId>mapstruct-spring-annotations</artifactId>
-                <version>0.1.0</version>
+                <version>${org.mapstruct.extensions.spring.version}</version>
             </dependency>
 
             <!-- mybatis -->
@@ -620,12 +621,12 @@
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok-mapstruct-binding</artifactId>
-                            <version>${lombok-mapstruct-binding.version}</version>
+                            <version>${lombok.mapstruct.binding.version}</version>
                         </path>
                         <path>
                             <groupId>org.mapstruct.extensions.spring</groupId>
                             <artifactId>mapstruct-spring-extensions</artifactId>
-                            <version>0.1.0</version>
+                            <version>${org.mapstruct.extensions.spring.version}</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
