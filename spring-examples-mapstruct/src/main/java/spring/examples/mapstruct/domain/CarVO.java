@@ -6,10 +6,9 @@ import java.io.Serializable;
 
 @Getter
 @Setter
-@Builder
 @ToString
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class CarVO implements Serializable {
 
     private String make;
