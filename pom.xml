@@ -46,11 +46,11 @@
         <encoding>UTF-8</encoding>
         <spring.boot.version>2.5.2</spring.boot.version>
         <spring.version>5.3.9</spring.version>
-        <slf4j.version>1.7.30</slf4j.version>
+        <slf4j.version>1.7.31</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <hsqldb.version>2.5.1</hsqldb.version>
-        <jackson.version>2.12.3</jackson.version>
-        <netty.version>4.1.65.Final</netty.version>
+        <jackson.version>2.12.4</jackson.version>
+        <netty.version>4.1.66.Final</netty.version>
 
         <lombok.version>1.18.20</lombok.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
@@ -319,13 +319,6 @@
                 <version>2.2.0</version>
             </dependency>
 
-            <!-- jdbc-pool (HikariCP) -->
-            <dependency>
-                <groupId>com.zaxxer</groupId>
-                <artifactId>HikariCP</artifactId>
-                <version>4.0.3</version>
-            </dependency>
-
             <!-- mysql -->
             <dependency>
                 <groupId>mysql</groupId>
@@ -333,16 +326,23 @@
                 <version>8.0.25</version>
             </dependency>
 
+            <!-- jdbc-pool (HikariCP) -->
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>4.0.3</version>
+            </dependency>
+
             <!-- prometheus -->
             <dependency>
                 <groupId>io.micrometer</groupId>
                 <artifactId>micrometer-core</artifactId>
-                <version>1.7.1</version>
+                <version>1.7.2</version>
             </dependency>
             <dependency>
                 <groupId>io.micrometer</groupId>
                 <artifactId>micrometer-registry-prometheus</artifactId>
-                <version>1.7.1</version>
+                <version>1.7.2</version>
             </dependency>
 
             <!-- slf4j -->
