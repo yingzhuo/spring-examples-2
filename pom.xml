@@ -44,11 +44,11 @@
 
     <properties>
         <encoding>UTF-8</encoding>
-        <spring.boot.version>2.5.2</spring.boot.version>
+        <spring.boot.version>2.5.3</spring.boot.version>
         <spring.version>5.3.9</spring.version>
         <slf4j.version>1.7.31</slf4j.version>
-        <logback.version>1.2.3</logback.version>
-        <hsqldb.version>2.5.1</hsqldb.version>
+        <logback.version>1.2.4</logback.version>
+        <hsqldb.version>2.5.2</hsqldb.version>
         <jackson.version>2.12.4</jackson.version>
         <netty.version>4.1.66.Final</netty.version>
 
@@ -297,7 +297,7 @@
             <dependency>
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-core</artifactId>
-                <version>7.11.2</version>
+                <version>7.11.3</version>
             </dependency>
 
             <!-- mapstruct -->
@@ -323,7 +323,7 @@
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.25</version>
+                <version>8.0.26</version>
             </dependency>
 
             <!-- jdbc-pool (HikariCP) -->
