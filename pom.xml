@@ -35,6 +35,7 @@
         <module>spring-examples-retry</module>
         <module>spring-examples-scheduling</module>
         <module>spring-examples-shutdown</module>
+        <module>spring-examples-springdoc</module>
         <module>spring-examples-upload</module>
         <module>spring-examples-validation</module>
         <module>spring-examples-actuator-health</module>
@@ -343,6 +344,18 @@
                 <groupId>io.micrometer</groupId>
                 <artifactId>micrometer-registry-prometheus</artifactId>
                 <version>1.7.2</version>
+            </dependency>
+
+            <!-- springdoc -->
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-ui</artifactId>
+                <version>1.5.10</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-webmvc-core</artifactId>
+                <version>1.5.10</version>
             </dependency>
 
             <!-- slf4j -->
