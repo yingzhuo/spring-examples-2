@@ -8,8 +8,16 @@ spring:
     username: "root"
     password: "root"
 
-mybatis:
-  check-config-location: false
-  type-aliases-package: "spring.examples.mybatis"
+# ----------------------------------------------------------------------------------------------------------------------
+# mybatis
+# ----------------------------------------------------------------------------------------------------------------------
+mybatis-plus:
+  global-config:
+    banner: false
+    db-config:
+      id-type: none
+      table-prefix: "t_"
+      table-underline: true
+  type-aliases-package: "spring.examples.mybatis.domain"
   mapper-locations:
-    - "classpath*:/mybatis-mapper/*.xml"
+    - "classpath*:/mybatis-mapper/**/*.xml"
