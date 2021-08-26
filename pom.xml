@@ -34,6 +34,7 @@
         <module>spring-examples-resttemplate</module>
         <module>spring-examples-retry</module>
         <module>spring-examples-scheduling</module>
+        <module>spring-examples-security</module>
         <module>spring-examples-shutdown</module>
         <module>spring-examples-springdoc</module>
         <module>spring-examples-upload</module>
