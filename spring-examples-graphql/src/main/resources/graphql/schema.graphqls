@@ -1,0 +1,12 @@
+type Author {
+
+    # ID
+    id: ID!
+
+    # 作者名字
+    name: String
+}
+
+type Query {
+    findUniqueAuthor: Author!
+}

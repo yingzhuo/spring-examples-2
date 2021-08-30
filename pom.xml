@@ -16,6 +16,7 @@
         <module>spring-examples-event</module>
         <module>spring-examples-excel-view</module>
         <module>spring-examples-flyway</module>
+        <module>spring-examples-graphql</module>
         <module>spring-examples-https</module>
         <module>spring-examples-jackson</module>
         <module>spring-examples-redis</module>
@@ -51,7 +52,7 @@
         <slf4j.version>1.7.32</slf4j.version>
         <logback.version>1.2.5</logback.version>
         <hsqldb.version>2.5.2</hsqldb.version>
-        <jackson.version>2.12.4</jackson.version>
+        <jackson.version>2.12.5</jackson.version>
         <netty.version>4.1.67.Final</netty.version>
 
         <lombok.version>1.18.20</lombok.version>
@@ -59,6 +60,22 @@
         <org.mapstruct.extensions.spring.version>0.1.0</org.mapstruct.extensions.spring.version>
         <lombok.mapstruct.binding.version>0.2.0</lombok.mapstruct.binding.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+        </repository>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <dependencyManagement>
         <dependencies>
