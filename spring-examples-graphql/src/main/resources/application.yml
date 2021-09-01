@@ -1,5 +1,6 @@
 spring:
   graphql:
+    path: "/graphql"
     graphiql:
       enabled: true
       path: "/graphql"
