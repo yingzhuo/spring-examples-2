@@ -48,11 +48,11 @@
     <properties>
         <encoding>UTF-8</encoding>
         <spring.boot.version>2.5.5</spring.boot.version>
-        <spring.version>5.3.10</spring.version>
+        <spring.version>5.3.11</spring.version>
         <slf4j.version>1.7.32</slf4j.version>
         <logback.version>1.2.6</logback.version>
-        <jackson.version>2.12.5</jackson.version>
-        <netty.version>4.1.68.Final</netty.version>
+        <jackson.version>2.13.0</jackson.version>
+        <netty.version>4.1.69.Final</netty.version>
 
         <lombok.version>1.18.20</lombok.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
@@ -301,7 +301,7 @@
             <dependency>
                 <groupId>com.graphql-java</groupId>
                 <artifactId>graphql-java</artifactId>
-                <version>17.2</version>
+                <version>17.3</version>
             </dependency>
             <dependency>
                 <groupId>com.graphql-java</groupId>
@@ -334,7 +334,7 @@
             <dependency>
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-core</artifactId>
-                <version>7.14.0</version>
+                <version>8.0.1</version>
             </dependency>
 
             <!-- mapstruct -->
@@ -374,12 +374,12 @@
             <dependency>
                 <groupId>io.micrometer</groupId>
                 <artifactId>micrometer-core</artifactId>
-                <version>1.7.3</version>
+                <version>1.7.4</version>
             </dependency>
             <dependency>
                 <groupId>io.micrometer</groupId>
                 <artifactId>micrometer-registry-prometheus</artifactId>
-                <version>1.7.3</version>
+                <version>1.7.4</version>
             </dependency>
 
             <!-- springdoc -->
