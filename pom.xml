@@ -47,12 +47,12 @@
 
     <properties>
         <encoding>UTF-8</encoding>
-        <spring.boot.version>2.5.6</spring.boot.version>
-        <spring.version>5.3.12</spring.version>
+        <spring.boot.version>2.6.0</spring.boot.version>
+        <spring.version>5.3.13</spring.version>
         <slf4j.version>1.7.32</slf4j.version>
-        <logback.version>1.2.6</logback.version>
+        <logback.version>1.2.7</logback.version>
         <jackson.version>2.13.0</jackson.version>
-        <netty.version>4.1.69.Final</netty.version>
+        <netty.version>4.1.70.Final</netty.version>
 
         <lombok.version>1.18.22</lombok.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
@@ -313,7 +313,7 @@
             <dependency>
                 <groupId>org.springframework.session</groupId>
                 <artifactId>spring-session-data-redis</artifactId>
-                <version>2.1.13.RELEASE</version>
+                <version>2.6.0</version>
             </dependency>
 
             <!-- xxljob -->
@@ -327,14 +327,14 @@
             <dependency>
                 <groupId>org.springframework.kafka</groupId>
                 <artifactId>spring-kafka</artifactId>
-                <version>2.7.6</version>
+                <version>2.8.0</version>
             </dependency>
 
             <!-- flyway -->
             <dependency>
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-core</artifactId>
-                <version>8.0.2</version>
+                <version>8.0.5</version>
             </dependency>
 
             <!-- mapstruct -->
@@ -374,12 +374,12 @@
             <dependency>
                 <groupId>io.micrometer</groupId>
                 <artifactId>micrometer-core</artifactId>
-                <version>1.7.5</version>
+                <version>1.8.0</version>
             </dependency>
             <dependency>
                 <groupId>io.micrometer</groupId>
                 <artifactId>micrometer-registry-prometheus</artifactId>
-                <version>1.7.5</version>
+                <version>1.8.0</version>
             </dependency>
 
             <!-- springdoc -->
@@ -447,19 +447,19 @@
             <dependency>
                 <groupId>org.messaginghub</groupId>
                 <artifactId>pooled-jms</artifactId>
-                <version>1.2.1</version>
+                <version>1.2.2</version>
             </dependency>
 
             <!-- byte-buddy -->
             <dependency>
                 <groupId>net.bytebuddy</groupId>
                 <artifactId>byte-buddy</artifactId>
-                <version>1.10.22</version>
+                <version>1.11.22</version>
             </dependency>
             <dependency>
                 <groupId>net.bytebuddy</groupId>
                 <artifactId>byte-buddy-agent</artifactId>
-                <version>1.10.22</version>
+                <version>1.11.22</version>
             </dependency>
 
             <!-- netty -->
@@ -587,7 +587,7 @@
             <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
-                <version>2.8.8</version>
+                <version>2.8.9</version>
             </dependency>
 
             <!-- cache -->
