@@ -46,12 +46,12 @@
 
     <properties>
         <encoding>UTF-8</encoding>
-        <spring.boot.version>2.6.7</spring.boot.version>
-        <spring.version>5.3.19</spring.version>
+        <spring.boot.version>2.7.0</spring.boot.version>
+        <spring.version>5.3.20</spring.version>
         <slf4j.version>1.7.36</slf4j.version>
         <logback.version>1.2.11</logback.version>
-        <jackson.version>2.13.2</jackson.version>
-        <netty.version>4.1.75.Final</netty.version>
+        <jackson.version>2.13.3</jackson.version>
+        <netty.version>4.1.77.Final</netty.version>
 
         <lombok.version>1.18.24</lombok.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
