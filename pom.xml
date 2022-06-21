@@ -47,15 +47,15 @@
     <properties>
         <encoding>UTF-8</encoding>
         <spring.boot.version>2.7.0</spring.boot.version>
-        <spring.version>5.3.20</spring.version>
+        <spring.version>5.3.21</spring.version>
         <slf4j.version>1.7.36</slf4j.version>
         <logback.version>1.2.11</logback.version>
         <jackson.version>2.13.3</jackson.version>
-        <netty.version>4.1.77.Final</netty.version>
+        <netty.version>4.1.78.Final</netty.version>
 
         <lombok.version>1.18.24</lombok.version>
-        <mapstruct.version>1.4.2.Final</mapstruct.version>
-        <org.mapstruct.extensions.spring.version>0.1.0</org.mapstruct.extensions.spring.version>
+        <mapstruct.version>1.5.2.Final</mapstruct.version>
+        <org.mapstruct.extensions.spring.version>0.1.1</org.mapstruct.extensions.spring.version>
         <lombok.mapstruct.binding.version>0.2.0</lombok.mapstruct.binding.version>
     </properties>
 
