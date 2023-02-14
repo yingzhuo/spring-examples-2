@@ -29,7 +29,7 @@ public class ApplicationConfigEvent implements ApplicationRunner {
     }
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
         eventPublisher.publishEvent(new CustomEvent(new Object(), "hello"));
     }
 
