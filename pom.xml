@@ -11,7 +11,6 @@
         <module>spring-examples-activemq</module>
         <module>spring-examples-async</module>
         <module>spring-examples-batch</module>
-        <module>spring-examples-classpath-scanning</module>
         <module>spring-examples-ehcache</module>
         <module>spring-examples-event</module>
         <module>spring-examples-excel-view</module>
@@ -30,7 +29,6 @@
         <module>spring-examples-quartz</module>
         <module>spring-examples-rabbitmq</module>
         <module>spring-examples-redis-cache</module>
-        <module>spring-examples-redis-session</module>
         <module>spring-examples-resttemplate</module>
         <module>spring-examples-retry</module>
         <module>spring-examples-scheduling</module>
@@ -46,7 +44,7 @@
 
     <properties>
         <encoding>UTF-8</encoding>
-        <spring.boot.version>2.7.8</spring.boot.version>
+        <spring.boot.version>2.7.9</spring.boot.version>
         <spring.version>5.3.25</spring.version>
         <slf4j.version>1.7.36</slf4j.version>
         <logback.version>1.2.11</logback.version>
@@ -289,13 +287,6 @@
                 <version>1.5.3</version>
             </dependency>
 
-            <!-- spring-session -->
-            <dependency>
-                <groupId>org.springframework.session</groupId>
-                <artifactId>spring-session-data-redis</artifactId>
-                <version>2.6.3</version>
-            </dependency>
-
             <!-- xxljob -->
             <dependency>
                 <groupId>com.github.yingzhuo</groupId>
@@ -307,7 +298,7 @@
             <dependency>
                 <groupId>org.springframework.kafka</groupId>
                 <artifactId>spring-kafka</artifactId>
-                <version>2.9.2</version>
+                <version>2.9.3</version>
             </dependency>
 
             <!-- flyway -->
@@ -425,7 +416,7 @@
             <dependency>
                 <groupId>net.logstash.logback</groupId>
                 <artifactId>logstash-logback-encoder</artifactId>
-                <version>7.2</version>
+                <version>7.3</version>
             </dependency>
 
             <!-- pooled-jms -->

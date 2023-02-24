@@ -1,1 +1,0 @@
-# spring-examples-redis-session
