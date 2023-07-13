@@ -44,14 +44,14 @@
 
     <properties>
         <encoding>UTF-8</encoding>
-        <spring.boot.version>2.7.11</spring.boot.version>
-        <spring.version>5.3.27</spring.version>
+        <spring.boot.version>2.7.13</spring.boot.version>
+        <spring.version>5.3.28</spring.version>
         <slf4j.version>1.7.36</slf4j.version>
         <logback.version>1.2.11</logback.version>
         <jackson.version>2.13.5</jackson.version>
         <netty.version>4.1.90.Final</netty.version>
 
-        <lombok.version>1.18.26</lombok.version>
+        <lombok.version>1.18.28</lombok.version>
         <mapstruct.version>1.5.3.Final</mapstruct.version>
         <org.mapstruct.extensions.spring.version>0.1.1</org.mapstruct.extensions.spring.version>
         <lombok.mapstruct.binding.version>0.2.0</lombok.mapstruct.binding.version>
